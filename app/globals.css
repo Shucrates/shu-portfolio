@@ -395,18 +395,18 @@ body {
 }
 
 /* Curtain reveal panels */
-.curtain-left,
-.curtain-right {
+.curtain-top,
+.curtain-bottom {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
+  left: 0;
+  right: 0;
+  height: 50%;
   background: var(--white);
   z-index: 2;
 }
 
-.curtain-left  { left: 0; }
-.curtain-right { right: 0; }
+.curtain-top    { top: 0; }
+.curtain-bottom { bottom: 0; }
 
 /* SHUISBORED* — positioned below image in initial viewport;
    covered by expanding image as user scrolls */
@@ -447,29 +447,26 @@ body {
   z-index: -1;
 }
 
-.parallax-about-title {
-  font-size: clamp(48px, 9vw, 110px);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 24px;
-}
-
-.parallax-about-bio {
-  font-size: clamp(14px, 1.4vw, 18px);
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.parallax-statement {
+  font-size: clamp(28px, 4.5vw, 64px);
+  font-weight: 800;
   font-style: italic;
+  text-transform: uppercase;
   color: var(--white);
-  max-width: 520px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  max-width: 1000px;
 }
 
-.parallax-about-bio strong {
-  font-weight: 900;
-  font-style: normal;
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
 }
 
 /* ──────────────────────────────────────
