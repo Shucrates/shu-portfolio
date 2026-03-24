@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import GifCanvas from './GifCanvas'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -86,20 +87,7 @@ export default function HeroSection() {
             - About overlay fades in once fullscreen
           */}
           <div className="hero-image-frame" ref={imageFrameRef}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/blackbg.gif"
-              alt="Animated black background"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                transform: 'rotate(90deg)',
-                transformOrigin: 'center center',
-              }}
-            />
+            <GifCanvas src="/blackbg.gif" idleTimeout={250} speed={6} />
 
             {/* Curtain reveal panels (z-index above image) */}
             <div className="curtain-left"  ref={curtainLeftRef}  aria-hidden="true" />
